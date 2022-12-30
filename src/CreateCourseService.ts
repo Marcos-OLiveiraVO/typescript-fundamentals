@@ -5,8 +5,8 @@ interface Course {
 }
 
 class CreateCourseService {
-  Execute(data: Course) {
-    console.log(data.duration, data.educator, data.name);
+  Execute({ name, duration = 8, educator }: Course) {
+    console.log(duration, educator, name);
   }
 }
 
